@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Utility.h"
 
 enum telnetState{
     TOP_LEVEL,
@@ -44,7 +45,7 @@ enum telnetState{
     CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef)(ip), port, &readStream, &writeStream);
     if(readStream && writeStream)
     {
-        CFReadStreamSetProperty(readStream, kCFStreamPropertyShouldCloseNativeSocket, kCFBooleanTrue);
+//        CFReadStreamSetProperty(readStream, kCFStreamPropertyShouldCloseNativeSocket, kCFBooleanTrue);
 //        CFWriteStreamSetProperty(writeStream, kCFStreamPropertyShouldCloseNativeSocket, kCFBooleanTrue);
         
         iStream = (__bridge NSInputStream *)(readStream);
@@ -79,19 +80,20 @@ enum telnetState{
         {
             NSMutableData *data = [[NSMutableData alloc]init];
             
-            uint8_t buf[4096];
+            
             while ([(NSInputStream *)aStream hasBytesAvailable])
             {
+                uint8_t buf[4096];
                 NSInteger len = [(NSInputStream *)aStream read: buf maxLength: 4096];
                 if (len > 0)
                 {
                     [data appendBytes:buf length:len];
-                    NSLog(@"%s",buf);
 //                    printf(buf);
                 }
-//                NSLog(@"%s",buf);
             }
-
+            NSString *s = [Utility getStringFromTelnetData:data];
+            
+            NSLog(@"%@",s);
             
             break;
         }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E97125461B3B9B8300F18807 /* Encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = E97125441B3B9B8300F18807 /* Encoding.c */; };
+		E971254C1B3BAA9A00F18807 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = E971254B1B3BAA9A00F18807 /* Utility.m */; };
 		E9B94F7C1AF9C7C100202FBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B94F7B1AF9C7C100202FBA /* main.m */; };
 		E9B94F7F1AF9C7C100202FBA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B94F7E1AF9C7C100202FBA /* AppDelegate.m */; };
 		E9B94F821AF9C7C100202FBA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B94F811AF9C7C100202FBA /* ViewController.m */; };
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E97125441B3B9B8300F18807 /* Encoding.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Encoding.c; sourceTree = "<group>"; };
+		E97125451B3B9B8300F18807 /* Encoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encoding.h; sourceTree = "<group>"; };
+		E971254A1B3BAA9A00F18807 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utility.h; path = ../Utility.h; sourceTree = "<group>"; };
+		E971254B1B3BAA9A00F18807 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utility.m; path = ../Utility.m; sourceTree = "<group>"; };
 		E9B94F761AF9C7C100202FBA /* telnet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = telnet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B94F7A1AF9C7C100202FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9B94F7B1AF9C7C100202FBA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,10 +87,14 @@
 		E9B94F781AF9C7C100202FBA /* telnet */ = {
 			isa = PBXGroup;
 			children = (
+				E971254A1B3BAA9A00F18807 /* Utility.h */,
+				E971254B1B3BAA9A00F18807 /* Utility.m */,
 				E9B94F7D1AF9C7C100202FBA /* AppDelegate.h */,
 				E9B94F7E1AF9C7C100202FBA /* AppDelegate.m */,
 				E9B94F801AF9C7C100202FBA /* ViewController.h */,
 				E9B94F811AF9C7C100202FBA /* ViewController.m */,
+				E97125441B3B9B8300F18807 /* Encoding.c */,
+				E97125451B3B9B8300F18807 /* Encoding.h */,
 				E9B94F831AF9C7C100202FBA /* Main.storyboard */,
 				E9B94F861AF9C7C100202FBA /* Images.xcassets */,
 				E9B94F881AF9C7C100202FBA /* LaunchScreen.xib */,
@@ -221,6 +231,8 @@
 			files = (
 				E9B94F821AF9C7C100202FBA /* ViewController.m in Sources */,
 				E9B94F7F1AF9C7C100202FBA /* AppDelegate.m in Sources */,
+				E971254C1B3BAA9A00F18807 /* Utility.m in Sources */,
+				E97125461B3B9B8300F18807 /* Encoding.c in Sources */,
 				E9B94F7C1AF9C7C100202FBA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
